@@ -1,0 +1,352 @@
+:root {
+  /* CSS VARIABLE THEME COLOR */
+  /*--primarycolor:#9933CC;*/
+  --primarycolor: #00a6cb;
+}
+/***************  RAFAEL *****************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #00a6cb;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  height: 100%;
+  max-height: 30px;
+}
+
+header i {
+  cursor: pointer;
+}
+
+.appbar {
+  height: 60px;
+  width: 100%;
+  background-color: #ccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/*Icons*/
+.gg-data {
+  transform: scale(var(--ggs, 1));
+}
+.gg-data,
+.gg-data::after,
+.gg-data::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+.gg-data::after,
+.gg-data::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  left: 2px;
+}
+.gg-data::after {
+  background: linear-gradient(to left, currentColor 8px, transparent 0)
+    no-repeat bottom center/2px 8px;
+  width: 22px;
+  height: 22px;
+  top: -6px;
+  left: -6px;
+}
+.gg-data,
+.gg-data::after {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/*Info*/
+.gg-info {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 40px;
+}
+.gg-info::after,
+.gg-info::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  background: currentColor;
+  left: 7px;
+}
+.gg-info::after {
+  bottom: 2px;
+  height: 8px;
+}
+.gg-info::before {
+  height: 2px;
+  top: 2px;
+}
+
+/*exit*/
+.gg-log-off {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  border: 2px solid;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid transparent;
+}
+.gg-log-off::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  height: 8px;
+  width: 2px;
+  background: currentColor;
+  left: 5px;
+  bottom: 6px;
+}
+/********/
+
+button.exit-btn {
+  background-color: #dc3630;
+}
+/*****************************************/
+body.invert,
+body.invert a,
+body.invert h1 {
+  background-color: #f1f1f1;
+  color: white;
+}
+body.invert .msg {
+  background-color: #282828;
+  border-top: 1px solid #555;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  color: #fff;
+}
+body.invert .q[role="img"] {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.c,
+body {
+  text-align: center;
+  font-family: verdana;
+}
+.wrap {
+  text-align: left;
+  display: inline-block;
+  min-width: 260px;
+  max-width: 500px;
+}
+div,
+input,
+select {
+  padding: 5px;
+  font-size: 1em;
+  /*width: 100%;*/
+  /*/*margin: 3px 0 10px 0; // BEFORE spacing shows label closer to input, but need to do same for AFTER*/
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+div {
+  margin: 5px 0;
+}
+input,
+button,
+select,
+.msg {
+  border-radius: 0.3rem;
+  width: 100%;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+  border: 0;
+  background-color: var(--primarycolor);
+  color: #fff;
+  line-height: 2.4rem;
+  font-size: 1.2rem;
+}
+input[type="file"] {
+  border: 1px solid var(--primarycolor);
+}
+a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primarycolor);
+  text-decoration: underline;
+}
+.h {
+  display: none;
+}
+.q {
+  height: 16px;
+  margin: 0;
+  padding: 0 5px;
+  text-align: right;
+  min-width: 38px;
+  float: right;
+}
+.q.q-0:after {
+  background-position-x: 0;
+}
+.q.q-1:after {
+  background-position-x: -16px;
+}
+.q.q-2:after {
+  background-position-x: -32px;
+}
+.q.q-3:after {
+  background-position-x: -48px;
+}
+.q.q-4:after {
+  background-position-x: -64px;
+}
+.q.l:before {
+  background-position-x: -80px;
+  padding-right: 5px;
+}
+.ql .q {
+  float: left;
+}
+
+.q:after,
+.q:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 16px 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAQCAMAAADeZIrLAAAAJFBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADHJj5lAAAAC3RSTlMAIjN3iJmqu8zd7vF8pzcAAABsSURBVHja7Y1BCsAwCASNSVo3/v+/BUEiXnIoXkoX5jAQMxTHzK9cVSnvDxwD8bFx8PhZ9q8FmghXBhqA1faxk92PsxvRc2CCCFdhQCbRkLoAQ3q/wWUBqG35ZxtVzW4Ed6LngPyBU2CobdIDQ5oPWI5nCUwAAAAASUVORK5CYII=");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .q:before,
+  .q:after {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAAgCAMAAACfM+KhAAAALVBMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAOrOgAAAADnRSTlMAESIzRGZ3iJmqu8zd7gKjCLQAAACmSURBVHgB7dDBCoMwEEXRmKlVY3L//3NLhyzqIqSUggy8uxnhCR5Mo8xLt+14aZ7wwgsvvPA/ofv9+44334UXXngvb6XsFhO/VoC2RsSv9J7x8BnYLW+AjT56ud/uePMdb7IP8Bsc/e7h8Cfk912ghsNXWPpDC4hvN+D1560A1QPORyh84VKLjjdvfPFm++i9EWq0348XXnjhhT+4dIbCW+WjZim9AKk4UZMnnCEuAAAAAElFTkSuQmCC");
+    background-size: 95px 16px;
+  }
+}
+
+.msg {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-left-color: #777;
+}
+
+.msg h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.msg.P {
+  border-left-color: var(--primarycolor);
+}
+.msg.P h4 {
+  color: var(--primarycolor);
+}
+.msg.S {
+  border-left-color: #5cb85c;
+}
+.msg.S h4 {
+  color: #5cb85c;
+}
+.msg.D {
+  border-left-color: #dc3630;
+}
+.msg.D h4 {
+  color: #dc3630;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+  padding: 0 0 0.5em 0;
+}
+td {
+  vertical-align: top;
+}
+button.D {
+  background-color: #dc3630;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*transition: 0s filter;*/
+  transition: 0s opacity;
+  transition-delay: 3s;
+  transition-duration: 0s;
+  cursor: pointer;
+}
+
+button i {
+  margin-right: 3%;
+}
+
+button:active {
+  opacity: 50% !important;
+  /*filter: brightness(50%);*/
+  cursor: wait;
+  transition-delay: 0s;
+}
+
+button:hover {
+  opacity: 80%;
+}
+
+:disabled {
+  opacity: 0.5;
+}
+
+input {
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+  color: var(--primarycolor);
+}
+input::placeholder {
+  color: #b1b1b1;
+  font-style: italic;
+}
+input:focus {
+  border: 1px thin solid #ccc;
+  box-shadow: 1px 1px 8px 1px var(--primarycolor);
+}
